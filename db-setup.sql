@@ -1,5 +1,63 @@
 -- USE YOUR-DB-HERE;
 
+  -- CREATE TABLE lineslides (
+  --   id int NOT NULL AUTO_INCREMENT,
+  --     manufacturerid int NOT NULL,
+  --     name VARCHAR(255) NOt NULL,
+  --     manufacturer VARCHAR(255) NOT NULL,
+  --     material VARCHAR(255),
+  --     weight int, 
+  --     wll int,
+  --     mbc int,
+  --     webbingwidth VARCHAR(255), 
+  --     slidertype VARCHAR(255),
+  --     innerwidth int,
+  --     price int,
+  --     PRIMARY KEY (id)
+  -- );
+
+-- CREATE TABLE leashrings (
+--      id int NOT NULL AUTO_INCREMENT,
+--      manufacturerid int NOT NULL,
+--      name VARCHAR(255) NOT NULL,
+--      manufacturer VARCHAR(255) NOT NULL,
+--      material VARCHAR(255),
+--      weight int,
+--      wll  int, 
+--      mbs int,
+--      materialdiameter int, 
+--      innerdiameter int, 
+--      outerdiameter int, 
+--      price int,
+--      PRIMARY KEY (id)
+-- );
+
+-- CREATE TABLE rig (
+--      id int NOT NULL AUTO_INCREMENT,
+--      name VARCHAR(255) NOT NULL,
+--      description VARCHAR(255),
+--      PRIMARY KEY (id)  
+-- )
+
+-- CREATE TABLE rigleashrings (
+--   id int NOT NULL AUTO_INCREMENT,
+--   leashringsId int NOT NULL,
+--   rigId int NOT NULL, 
+--   userId VARCHAR(255) NOT NULL,
+
+--   PRIMARY KEY (id),
+--   INDEX ( leashringsId, rigId),
+--   INDEX ( userId),
+
+--   FOREIGN KEY (leashringsId)
+--     REFERENCES leashrings(id)
+--     ON DELETE CASCADE,
+
+--   FOREIGN KEY (rigId)
+--   REFERENCES rig(id)
+--   ON DELETE CASCADE 
+-- )
+
 -- CREATE TABLE vaults (
 --     id int NOT NULL AUTO_INCREMENT,
 --     name VARCHAR(255) NOT NULL,

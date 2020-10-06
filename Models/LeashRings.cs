@@ -15,4 +15,9 @@ namespace weighmyslack.Models
     public int OuterDiameter { get; set; }
     public int Price { get; set; }
   }
+
+  public class RigLeashRingsViewModel : LeashRings
+  {
+    public int RigLeashRingsId { get; set; }
+  }
 }
