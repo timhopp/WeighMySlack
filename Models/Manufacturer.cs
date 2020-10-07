@@ -1,6 +1,6 @@
 namespace weighmyslack.Models
 {
-  public class Manufacturers
+  public class Manufacturer
   {
     public int Id { get; set; }
     public int YearEstablished { get; set; }

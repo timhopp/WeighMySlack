@@ -14,14 +14,14 @@ namespace weighmyslack.Services
     {
       _repo = repo;
     }
-    public IEnumerable<LeashRings> Get()
+    public IEnumerable<LeashRing> Get()
     {
       return _repo.Get();
     }
 
-    public LeashRings Create(LeashRings newLeashRings)
+    public LeashRing Create(LeashRing newLeashRing)
     {
-      return _repo.Create(newLeashRings);
+      return _repo.Create(newLeashRing);
     }
   }
 }

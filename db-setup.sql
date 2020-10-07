@@ -1,5 +1,13 @@
 -- USE YOUR-DB-HERE;
 
+CREATE TABLE manufacturers (
+  id int NOT NULL AUTO_INCREMENT,
+  yearestablished VARCHAR(255),
+  website VARCHAR(255),
+  facebook VARCHAR(255),
+  PRIMARY KEY (id)
+)
+
   -- CREATE TABLE lineslides (
   --   id int NOT NULL AUTO_INCREMENT,
   --     manufacturerid int NOT NULL,

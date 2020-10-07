@@ -62,6 +62,9 @@ namespace Keepr
 
       //NOTE REGISTER SERVICES AND REPOSITORIES
       services.AddTransient<LeashRingsService>();
+      services.AddTransient<LeashRingsRepository>();
+      services.AddTransient<ManufacturersService>();
+      services.AddTransient<ManufacturersRepository>();
     }
 
     private IDbConnection CreateDbConnection()

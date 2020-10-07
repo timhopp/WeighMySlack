@@ -15,17 +15,17 @@ namespace weighmyslack.Repositories
     {
       _db = db;
     }
-    internal IEnumerable<LeashRings> Get()
+    internal IEnumerable<LeashRing> Get()
     {
       string sql = "SELECT * FROM LeashRings";
-      return _db.Query<LeashRings>(sql);
+      return _db.Query<LeashRing>(sql);
     }
 
-    internal LeashRings Create(LeashRings newLeashRings)
+    internal LeashRing Create(LeashRing newLeashRing)
     {
-      string sql = @"INSERT INTO LeashRings (id, manufacturerid, name, manufacturer, material, weight, wll, mbs, materialdiameter, innerdiameter, outerdiameter, price) VALUES (@id, @manufacturerid, @name, @manufacturer, @material, @weight, @wll, @mbs, @materialdiameter, @innerdiameter, @outerdiameter, @price); SELECT LAST_INSERT_ID();";
-      newLeashRings.Id = _db.ExecuteScalar<int>(sql, newLeashRings);
-      return newLeashRings;
+      string sql = @"INSERT INTO LeashRings (manufacturerid, name, manufacturer, material, weight, wll, mbs, materialdiameter, innerdiameter, outerdiameter, price) VALUES (@manufacturerid, @name, @manufacturer, @material, @weight, @wll, @mbs, @materialdiameter, @innerdiameter, @outerdiameter, @price); SELECT LAST_INSERT_ID();";
+      newLeashRing.Id = _db.ExecuteScalar<int>(sql, newLeashRing);
+      return newLeashRing;
     }
   }
 }

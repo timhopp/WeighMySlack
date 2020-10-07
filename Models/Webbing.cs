@@ -1,6 +1,6 @@
 namespace weighmyslack.Models
 {
-  public class Webbings
+  public class Webbing
   {
     public int Id { get; set; }
     public string ManufacturerId { get; set; }

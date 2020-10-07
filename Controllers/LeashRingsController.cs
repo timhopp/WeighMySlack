@@ -22,7 +22,7 @@ namespace weighmyslack.Controllers
       _lrs = lrs;
     }
     [HttpGet]
-    public ActionResult<IEnumerable<LeashRings>> Get()
+    public ActionResult<IEnumerable<LeashRing>> Get()
     {
       try
       {
@@ -35,11 +35,11 @@ namespace weighmyslack.Controllers
     }
 
     [HttpPost]
-    public ActionResult<LeashRings> Post([FromBody] LeashRings newLeashRings)
+    public ActionResult<LeashRing> Post([FromBody] LeashRing newLeashRing)
     {
       try
       {
-        return Ok(_lrs.Create(newLeashRings));
+        return Ok(_lrs.Create(newLeashRing));
       }
       catch (Exception err)
       {

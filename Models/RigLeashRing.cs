@@ -1,6 +1,6 @@
 namespace weighmyslack.Models
 {
-  public class RigLeashRings
+  public class RigLeashRing
   {
     public int Id { get; set; }
     public int LeashRingsId { get; set; }
