@@ -2,6 +2,9 @@
   <div class="leashRings">
     <div class="card bg-light">
       <p>{{ leashRings.name }}</p>
+      <button class="btn btn-info" @click="addToRig(leashRings.id)">
+        Add To Rig
+      </button>
     </div>
   </div>
 </template>
@@ -15,7 +18,15 @@ export default {
     return {};
   },
   computed: {},
-  methods: {},
+  methods: {
+    addLeashRingsToRig(leashRingID) {
+      this.$store.commit("addToRig", {
+        leashRingId: leashRingID,
+        rigId: "1",
+        userId: this.$store.state.user.sub,
+      });
+    },
+  },
   components: {},
 };
 </script>

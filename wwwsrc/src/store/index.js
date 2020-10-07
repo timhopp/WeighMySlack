@@ -20,6 +20,7 @@ export default new Vuex.Store({
     leashRings: [],
     manufacturerLeashRings: [],
     manufacturers: [],
+    user: {},
   },
   mutations: {
     setManufacturers(state, manufacturers) {
@@ -31,6 +32,9 @@ export default new Vuex.Store({
     setManufacturerLeashRings(state, manufacturerLeashRings) {
       state.manufacturerLeashRings = manufacturerLeashRings;
     },
+    setUser(state, userInfo) {
+      state.user = userInfo;
+    },
   },
   actions: {
     setBearer({}, bearer) {
@@ -38,6 +42,9 @@ export default new Vuex.Store({
     },
     resetBearer() {
       api.defaults.headers.authorization = "";
+    },
+    setUser({ commit }, userInfo) {
+      commit("setUser", userInfo);
     },
     getManufacturers({ commit }) {
       api
@@ -51,6 +58,13 @@ export default new Vuex.Store({
       api
         .get("manufacturers/" + manufacturerId + "leashrings")
         .then((res) => commit("setManufacturerLeashRings", res.data));
+    },
+    async addLeashRingsToRig({ commit, dispatch }, data) {
+      try {
+        let res = await api.post("");
+      } catch (error) {
+        console.error(error);
+      }
     },
   },
 });

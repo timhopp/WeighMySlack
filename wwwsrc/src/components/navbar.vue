@@ -48,13 +48,14 @@ import axios from "axios";
 
 let _api = axios.create({
   baseURL: "https://localhost:5001",
-  withCredentials: true
+  withCredentials: true,
 });
 export default {
   name: "Navbar",
   methods: {
     async login() {
       await this.$auth.loginWithPopup();
+      this.$store.dispatch("setUser", this.$auth.user);
       this.$store.dispatch("setBearer", this.$auth.bearer);
       console.log("this.$auth.user: ");
       console.log(this.$auth.user);
@@ -62,8 +63,8 @@ export default {
     async logout() {
       this.$store.dispatch("resetBearer");
       await this.$auth.logout({ returnTo: window.location.origin });
-    }
-  }
+    },
+  },
 };
 </script>
 
