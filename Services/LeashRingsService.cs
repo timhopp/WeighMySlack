@@ -23,5 +23,10 @@ namespace weighmyslack.Services
     {
       return _repo.Create(newLeashRing);
     }
+
+    internal IEnumerable<LeashRing> GetLeashRingsByManufacturerId(int manufacturerId)
+    {
+      return _repo.GetLeashRingsByManufacturerId(manufacturerId);
+    }
   }
 }

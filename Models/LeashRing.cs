@@ -3,17 +3,18 @@ namespace weighmyslack.Models
   public class LeashRing
   {
     public int Id { get; set; }
-    public string ManufacturerId { get; set; }
+    public int ManufacturerId { get; set; }
     public string Name { get; set; }
+    public string Img { get; set; }
     public string Manufacturer { get; set; }
     public string Material { get; set; }
-    public int Weight { get; set; }
-    public int WLL { get; set; }
-    public int MBS { get; set; }
-    public int MaterialDiameter { get; set; }
-    public int InnerDiameter { get; set; }
-    public int OuterDiameter { get; set; }
-    public int Price { get; set; }
+    public decimal Weight { get; set; }
+    public decimal WLL { get; set; }
+    public decimal MBS { get; set; }
+    public decimal MaterialDiameter { get; set; }
+    public decimal InnerDiameter { get; set; }
+    public decimal OuterDiameter { get; set; }
+    public decimal Price { get; set; }
   }
 
   public class RigLeashRingsViewModel : LeashRing

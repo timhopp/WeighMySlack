@@ -1,12 +1,15 @@
 -- USE YOUR-DB-HERE;
 
-CREATE TABLE manufacturers (
-  id int NOT NULL AUTO_INCREMENT,
-  yearestablished VARCHAR(255),
-  website VARCHAR(255),
-  facebook VARCHAR(255),
-  PRIMARY KEY (id)
-)
+
+-- CREATE TABLE manufacturers (
+--   id int NOT NULL AUTO_INCREMENT,
+--   name VARCHAR(255),
+--   img VARCHAR(255),
+--   yearestablished VARCHAR(255),
+--   website VARCHAR(255),
+--   facebook VARCHAR(255),
+--   PRIMARY KEY (id)
+-- )
 
   -- CREATE TABLE lineslides (
   --   id int NOT NULL AUTO_INCREMENT,
@@ -24,21 +27,24 @@ CREATE TABLE manufacturers (
   --     PRIMARY KEY (id)
   -- );
 
--- CREATE TABLE leashrings (
---      id int NOT NULL AUTO_INCREMENT,
---      manufacturerid int NOT NULL,
---      name VARCHAR(255) NOT NULL,
---      manufacturer VARCHAR(255) NOT NULL,
---      material VARCHAR(255),
---      weight int,
---      wll  int, 
---      mbs int,
---      materialdiameter int, 
---      innerdiameter int, 
---      outerdiameter int, 
---      price int,
---      PRIMARY KEY (id)
--- );
+-- DROP TABLE IF EXISTS leashrings;
+
+CREATE TABLE leashrings (
+     id int NOT NULL AUTO_INCREMENT,
+     manufacturerid int NOT NULL,
+     name VARCHAR(255) NOT NULL,
+    img VARCHAR(255),
+     manufacturer VARCHAR(255) NOT NULL,
+     material VARCHAR(255),
+     weight decimal,
+     wll  decimal, 
+     mbs decimal,
+     materialdiameter decimal, 
+     innerdiameter decimal, 
+     outerdiameter decimal, 
+     price decimal,
+     PRIMARY KEY (id)
+);
 
 -- CREATE TABLE rig (
 --      id int NOT NULL AUTO_INCREMENT,

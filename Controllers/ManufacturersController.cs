@@ -16,11 +16,14 @@ namespace weighmyslack.Controllers
   public class ManufacturersController : ControllerBase
   {
     private readonly ManufacturersService _ms;
+    private readonly LeashRingsService _lrs;
 
-    public ManufacturersController(ManufacturersService ms)
+    public ManufacturersController(LeashRingsService lrs, ManufacturersService ms)
     {
+      _lrs = lrs;
       _ms = ms;
     }
+
     [HttpGet]
     public ActionResult<IEnumerable<Manufacturer>> Get()
     {
@@ -32,6 +35,19 @@ namespace weighmyslack.Controllers
       {
         return BadRequest(err.Message);
       }
+    }
+    [HttpGet("{manufacturerId}/leashrings")]
+    public ActionResult<Manufacturer> GetLeashRingsByManufacturerId(int manufacturerId)
+    {
+      try
+      {
+        return Ok(_lrs.GetLeashRingsByManufacturerId(manufacturerId));
+      }
+      catch (Exception err)
+      {
+        return BadRequest(err.Message);
+      }
+
     }
 
     [HttpPost]

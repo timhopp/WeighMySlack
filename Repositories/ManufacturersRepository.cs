@@ -22,7 +22,7 @@ namespace weighmyslack.Repositories
 
     internal object Create(Manufacturer newManufacturer)
     {
-      string sql = @"INSERT INTO Manufacturers (yearestablished, website, facebook) VALUES (@yearestablished, @website, @facebook); SELECT LAST_INSERT_ID();";
+      string sql = @"INSERT INTO Manufacturers (name, img, yearestablished, website, facebook) VALUES (@name, @img, @yearestablished, @website, @facebook); SELECT LAST_INSERT_ID();";
       newManufacturer.Id = _db.ExecuteScalar<int>(sql, newManufacturer);
       return newManufacturer;
     }
