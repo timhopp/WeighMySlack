@@ -15,5 +15,10 @@ namespace weighmyslack.Repositories
     {
       throw new NotImplementedException();
     }
+
+    internal IEnumerable<RigComponent> GetComponentsByRigId(int rigId)
+    {
+      throw new NotImplementedException();
+    }
   }
 }

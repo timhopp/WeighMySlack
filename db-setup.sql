@@ -29,27 +29,28 @@
 
 -- DROP TABLE IF EXISTS leashrings;
 
-CREATE TABLE leashrings (
-     id int NOT NULL AUTO_INCREMENT,
-     manufacturerid int NOT NULL,
-     name VARCHAR(255) NOT NULL,
-    img VARCHAR(255),
-     manufacturer VARCHAR(255) NOT NULL,
-     material VARCHAR(255),
-     weight decimal,
-     wll  decimal, 
-     mbs decimal,
-     materialdiameter decimal, 
-     innerdiameter decimal, 
-     outerdiameter decimal, 
-     price decimal,
-     PRIMARY KEY (id)
-);
+-- CREATE TABLE leashrings (
+--      id int NOT NULL AUTO_INCREMENT,
+--      manufacturerid int NOT NULL,
+--      name VARCHAR(255) NOT NULL,
+--     img VARCHAR(255),
+--      manufacturer VARCHAR(255) NOT NULL,
+--      material VARCHAR(255),
+--      weight decimal,
+--      wll  decimal, 
+--      mbs decimal,
+--      materialdiameter decimal, 
+--      innerdiameter decimal, 
+--      outerdiameter decimal, 
+--      price decimal,
+--      PRIMARY KEY (id)
+-- );
 
--- CREATE TABLE rig (
+-- CREATE TABLE rigs (
 --      id int NOT NULL AUTO_INCREMENT,
 --      name VARCHAR(255) NOT NULL,
 --      description VARCHAR(255),
+--      userId VARCHAR(255),
 --      PRIMARY KEY (id)  
 -- )
 
@@ -129,4 +130,4 @@ CREATE TABLE leashrings (
 -- DROP TABLE IF EXISTS vaultkeeps;
 -- DROP TABLE IF EXISTS vaults;
 -- DROP TABLE IF EXISTS keeps;
--- DROP TABLE IF EXISTS users;
+-- DROP TABLE IF EXISTS rig;

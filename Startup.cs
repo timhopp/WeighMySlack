@@ -65,6 +65,10 @@ namespace Keepr
       services.AddTransient<LeashRingsRepository>();
       services.AddTransient<ManufacturersService>();
       services.AddTransient<ManufacturersRepository>();
+      services.AddTransient<RigsService>();
+      services.AddTransient<RigsRepository>();
+      services.AddTransient<RigComponentsService>();
+      services.AddTransient<RigComponentRepository>();
     }
 
     private IDbConnection CreateDbConnection()
