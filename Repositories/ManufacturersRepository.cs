@@ -16,7 +16,7 @@ namespace weighmyslack.Repositories
     }
     internal IEnumerable<Manufacturer> Get()
     {
-      string sql = @"SELECT * FROM Manufacturers";
+      string sql = "SELECT * FROM Manufacturers";
       return _db.Query<Manufacturer>(sql);
     }
 

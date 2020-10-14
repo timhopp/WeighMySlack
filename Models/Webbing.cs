@@ -6,6 +6,7 @@ namespace weighmyslack.Models
     public string ManufacturerId { get; set; }
     public string Name { get; set; }
     public string Manufacturer { get; set; }
+    public string ComponentType { get; set; }
     public string Type { get; set; }
     public string Img { get; set; }
     public string Material { get; set; }

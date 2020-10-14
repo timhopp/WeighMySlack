@@ -16,6 +16,7 @@
   --     manufacturerid int NOT NULL,
   --     name VARCHAR(255) NOt NULL,
   --     manufacturer VARCHAR(255) NOT NULL,
+  --     componenttype VARCHAR(255) NOT NULL,
   --     material VARCHAR(255),
   --     weight int, 
   --     wll int,
@@ -27,7 +28,7 @@
   --     PRIMARY KEY (id)
   -- );
 
--- DROP TABLE IF EXISTS leashrings;
+-- DROP TABLE IF EXISTS lineslides;
 
 -- CREATE TABLE leashrings (
 --      id int NOT NULL AUTO_INCREMENT,
@@ -35,6 +36,7 @@
 --      name VARCHAR(255) NOT NULL,
 --     img VARCHAR(255),
 --      manufacturer VARCHAR(255) NOT NULL,
+--      componenttype VARCHAR(255) NOT NULL,
 --      material VARCHAR(255),
 --      weight decimal,
 --      wll  decimal, 

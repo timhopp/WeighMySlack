@@ -7,6 +7,7 @@ namespace weighmyslack.Models
     public string Name { get; set; }
     public string Img { get; set; }
     public string Manufacturer { get; set; }
+    public string ComponentType { get; set; }
     public string Material { get; set; }
     public decimal Weight { get; set; }
     public decimal WLL { get; set; }
@@ -17,8 +18,8 @@ namespace weighmyslack.Models
     public decimal Price { get; set; }
   }
 
-  public class RigLeashRingsViewModel : LeashRing
+  public class RigComponentViewModel : LeashRing
   {
-    public int RigLeashRingsId { get; set; }
+    public int RigComponentId { get; set; }
   }
 }
