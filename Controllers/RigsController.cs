@@ -23,14 +23,19 @@ namespace weighmyslack.Controllers
 
     }
 
-
-    // [Authorize]
+    //NOTE This still causes error, hmmm...
+    [Authorize]
     [HttpGet("{rigId}/components")]
     public ActionResult<RigComponent> GetComponentsByRigId(int rigId)
     {
       try
       {
-        return Ok(_rcs.GetComponentsByRigId(rigId));
+        return Ok(_rcs.GetLeashRingsByRigId(rigId),
+                  _rcs.GetLineSlidesByRigId(rigId),
+                  _rcs.GetWebbingGripsByRigId(rigId),
+                  _rcs.GetWebbingsByRigId(rigId),
+                  _rcs.GetWeblocksByRigId(rigId)
+                  );
       }
       catch (Exception err)
       {

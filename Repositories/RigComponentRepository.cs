@@ -20,5 +20,25 @@ namespace weighmyslack.Repositories
     {
       throw new NotImplementedException();
     }
+
+    internal IEnumerable<RigComponent> GetLineSlidesByRigId(int rigId)
+    {
+      throw new NotImplementedException();
+    }
+
+    internal IEnumerable<RigComponent> GetWebbingGripsByRigId(int rigId)
+    {
+      throw new NotImplementedException();
+    }
+
+    internal IEnumerable<RigComponent> GetWeblocksByRigId(int rigId)
+    {
+      throw new NotImplementedException();
+    }
+
+    internal IEnumerable<RigComponent> GetWebbingsByRigId(int rigId)
+    {
+      throw new NotImplementedException();
+    }
   }
 }

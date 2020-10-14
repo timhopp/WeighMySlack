@@ -29,5 +29,30 @@ namespace weighmyslack.Services
       return _repo.GetComponentsByRigId(rigId);
 
     }
+
+    public IEnumerable<RigComponent> GetLeashRingsByRigId(int rigId)
+    {
+      return _repo.GetLeashRingsByRigId(rigId);
+    }
+
+    public IEnumerable<RigComponent> GetLineSlidesByRigId(int rigId)
+    {
+      return _repo.GetLineSlidesByRigId(rigId);
+    }
+
+    public IEnumerable<RigComponent> GetWebbingGripsByRigId(int rigId)
+    {
+      return _repo.GetWebbingGripsByRigId(rigId);
+    }
+
+    public IEnumerable<RigComponent> GetWeblocksByRigId(int rigId)
+    {
+      return _repo.GetWeblocksByRigId(rigId);
+    }
+
+    public IEnumerable<RigComponent> GetWebbingsByRigId(int rigId)
+    {
+      return _repo.GetWebbingsByRigId(rigId);
+    }
   }
 }
