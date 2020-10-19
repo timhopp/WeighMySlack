@@ -20,4 +20,9 @@ namespace weighmyslack.Models
     public int Price { get; set; }
 
   }
+
+  public class WeblockRigComponentViewModel : Weblock
+  {
+    public int RigComponentId { get; set; }
+  }
 }

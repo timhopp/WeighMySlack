@@ -18,6 +18,9 @@ namespace weighmyslack.Models
     public int Price { get; set; }
   }
 
-  public class RigComponentViewModel : LineSlide { };
+  public class LineSlideRigComponentViewModel : LineSlide
+  {
+    public int RigComponentId { get; set; }
+  }
 
 }

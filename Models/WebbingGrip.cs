@@ -18,4 +18,9 @@ namespace weighmyslack.Models
     public string CompatibleWebbingWidth { get; set; }
     public int Price { get; set; }
   }
+
+  public class WebbingGripRigComponentViewModel : WebbingGrip
+  {
+    public int RigComponentId { get; set; }
+  }
 }

@@ -18,7 +18,7 @@ namespace weighmyslack.Models
     public decimal Price { get; set; }
   }
 
-  public class RigComponentViewModel : LeashRing
+  public class LeashRingRigComponentViewModel : LeashRing
   {
     public int RigComponentId { get; set; }
   }

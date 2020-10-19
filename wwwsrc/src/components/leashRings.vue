@@ -22,7 +22,7 @@ export default {
     addLeashRingsToRig(leashRingID) {
       this.$store.commit("addToRig", {
         leashRingId: leashRingID,
-        rigId: "1",
+        rigId: "3",
         userId: this.$store.state.user.sub,
       });
     },

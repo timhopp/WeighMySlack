@@ -24,13 +24,13 @@ namespace weighmyslack.Services
 
     //Does this need to be a View Model??
     //How to get this to return multiple repo requests at once? 
-    public IEnumerable<RigComponent> GetComponentsByRigId(int rigId)
-    {
-      return _repo.GetComponentsByRigId(rigId);
+    // public IEnumerable<RigComponent> GetComponentsByRigId(int rigId)
+    // {
+    //   return _repo.GetComponentsByRigId(rigId);
 
-    }
+    // }
 
-    public IEnumerable<RigComponent> GetLeashRingsByRigId(int rigId)
+    public IEnumerable<LeashRingRigComponentViewModel> GetLeashRingsByRigId(int rigId)
     {
       return _repo.GetLeashRingsByRigId(rigId);
     }
@@ -50,7 +50,7 @@ namespace weighmyslack.Services
       return _repo.GetWeblocksByRigId(rigId);
     }
 
-    public IEnumerable<RigComponent> GetWebbingsByRigId(int rigId)
+    public IEnumerable<WebbingRigComponentViewModel> GetWebbingsByRigId(int rigId)
     {
       return _repo.GetWebbingsByRigId(rigId);
     }

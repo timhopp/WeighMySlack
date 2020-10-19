@@ -22,11 +22,9 @@ namespace weighmyslack.Models
 
   }
 
-  //NOTE Do I want a relationship like this? If others can add gear yes...if only me then no? 
-
-  // public class VaultKeepViewModel : Keep
-  // {
-  //     public int VaultKeepId { get; set; }
-  // }
+  public class WebbingRigComponentViewModel : Webbing
+  {
+    public int RigComponentId { get; set; }
+  }
 }
 

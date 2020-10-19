@@ -25,17 +25,68 @@ namespace weighmyslack.Controllers
 
     //NOTE This still causes error, hmmm...
     [Authorize]
-    [HttpGet("{rigId}/components")]
-    public ActionResult<RigComponent> GetComponentsByRigId(int rigId)
+    [HttpGet("{rigId}/leashrings")]
+
+    public ActionResult<RigComponent> GetLeashRingsByRigId(int rigId)
     {
       try
       {
-        return Ok(_rcs.GetLeashRingsByRigId(rigId),
-                  _rcs.GetLineSlidesByRigId(rigId),
-                  _rcs.GetWebbingGripsByRigId(rigId),
-                  _rcs.GetWebbingsByRigId(rigId),
-                  _rcs.GetWeblocksByRigId(rigId)
-                  );
+        return Ok(_rcs.GetLeashRingsByRigId(rigId));
+      }
+      catch (Exception err)
+      {
+        return BadRequest(err.Message);
+      }
+    }
+
+    [Authorize]
+    [HttpGet("{rigId}/lineslides")]
+    public ActionResult<RigComponent> GetLineSlidesByByRigId(int rigId)
+    {
+      try
+      {
+        return Ok(_rcs.GetLineSlidesByRigId(rigId));
+      }
+      catch (Exception err)
+      {
+        return BadRequest(err.Message);
+      }
+    }
+
+    [Authorize]
+    [HttpGet("{rigId}/webbinggrips")]
+    public ActionResult<RigComponent> GetWebbingGripsByRigId(int rigId)
+    {
+      try
+      {
+        return Ok(_rcs.GetWebbingGripsByRigId(rigId));
+      }
+      catch (Exception err)
+      {
+        return BadRequest(err.Message);
+      }
+    }
+    [Authorize]
+    [HttpGet("{rigId}/webbings")]
+    public ActionResult<RigComponent> GetWebbingsByRigId(int rigId)
+    {
+      try
+      {
+        return Ok(_rcs.GetWebbingsByRigId(rigId));
+      }
+      catch (Exception err)
+      {
+        return BadRequest(err.Message);
+      }
+    }
+
+    [Authorize]
+    [HttpGet("{rigId}/weblocks")]
+    public ActionResult<RigComponent> GetWeblocksByRigId(int rigId)
+    {
+      try
+      {
+        return Ok(_rcs.GetWeblocksByRigId(rigId));
       }
       catch (Exception err)
       {
