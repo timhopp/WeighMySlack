@@ -73,6 +73,8 @@ namespace Keepr
       services.AddTransient<LineSlidesRepository>();
       services.AddTransient<WebbingGripsService>();
       services.AddTransient<WebbingGripsRepository>();
+      services.AddTransient<WebbingsService>();
+      services.AddTransient<WebbingsRepository>();
     }
 
     private IDbConnection CreateDbConnection()

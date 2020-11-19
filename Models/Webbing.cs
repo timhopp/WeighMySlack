@@ -7,16 +7,15 @@ namespace weighmyslack.Models
     public string Name { get; set; }
     public string Manufacturer { get; set; }
     public string ComponentType { get; set; }
-    public string Type { get; set; }
     public string Img { get; set; }
     public string Material { get; set; }
-    public int Width { get; set; }
-    public int Weight { get; set; }
-    public int WLL { get; set; }
-    public int MBS { get; set; }
-    public int Thickness { get; set; }
+    public decimal Width { get; set; }
+    public decimal Weight { get; set; }
+    public decimal WLL { get; set; }
+    public decimal MBS { get; set; }
+    public decimal Thickness { get; set; }
 
-    public string Elongation { get; set; }
+    public decimal Elongation { get; set; }
 
     public int Price { get; set; }
 
