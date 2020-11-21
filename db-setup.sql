@@ -1,21 +1,22 @@
 -- USE YOUR-DB-HERE;
 
--- CREATE TABLE webbinggrips (
---   id int NOT NULL AUTO_INCREMENT,
---   name VARCHAR(255),
---   manufacturer VARCHAR(255),
---   img VARCHAR(255),
---   componenttype VARCHAR(255),
---   material VARCHAR(255),
---   weight int,
---   wll decimal,
---   mbs decimal,
---   commonslipthreshold VARCHAR(255),
---   connectiontype VARCHAR(255),
---   compatiblewebbingwidth VARCHAR(255),
---   price decimal,
---   PRIMARY KEY (id)
--- )
+CREATE TABLE webbinggrips (
+  id int NOT NULL AUTO_INCREMENT,
+  manufacturerid int,
+  name VARCHAR(255),
+  manufacturer VARCHAR(255),
+  img VARCHAR(255),
+  componenttype VARCHAR(255),
+  material VARCHAR(255),
+  weight int,
+  wll decimal,
+  mbs decimal,
+  commonslipthreshold VARCHAR(255),
+  connectiontype VARCHAR(255),
+  compatiblewebbingwidth VARCHAR(255),
+  price decimal,
+  PRIMARY KEY (id)
+)
 
 -- CREATE TABLE manufacturers (
 --   id int NOT NULL AUTO_INCREMENT,

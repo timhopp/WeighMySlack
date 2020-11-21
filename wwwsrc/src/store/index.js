@@ -21,6 +21,7 @@ export default new Vuex.Store({
     lineSlides: [],
     manufacturerLeashRings: [],
     manufacturers: [],
+    webbingGrips: [],
     myRigs: [],
     user: {},
   },
@@ -43,6 +44,9 @@ export default new Vuex.Store({
     setMyRigs(state, myRigs) {
       state.myRigs = myRigs;
     },
+    setWebbingGrips(state, webbingGrips) {
+      state.webbingGrips = webbingGrips;
+    },
   },
   actions: {
     setBearer({}, bearer) {
@@ -64,6 +68,11 @@ export default new Vuex.Store({
     },
     getLineSlides({ commit }) {
       api.get("lineslides").then((res) => commit("setLineSlides", res.data));
+    },
+    getWebbingGrips({ commit }) {
+      api
+        .get("webbinggrips")
+        .then((res) => commit("setWebbingGrips", res.data));
     },
     getLeashRingsByManufacturer({ commit }, manufacturerId) {
       api

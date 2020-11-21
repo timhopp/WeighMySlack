@@ -25,6 +25,17 @@
     </lineSlide>
       </div>
     </div>
+     <div class="row">
+      <h3 class="ml-5">Webbing Grips</h3>
+      <div class="col-12">
+
+    <webbingGrip
+    v-for="webbingGripItem in webbingGrips" 
+    :webbingGrip="webbingGripItem" 
+    :key="webbingGripItem.id">
+    </webbingGrip>
+      </div>
+    </div>
     <div class="row">
       <h3 class="ml-5">Manufacturers</h3>
       <div class="col-12">
@@ -45,6 +56,7 @@
 import leashRings from "../components/leashRings";
 import manufacturer from "../components/manufacturer";
 import lineSlide from "../components/lineSlide";
+import webbingGrip from "../components/webbingGrip";
 export default {
   name: "home",
   computed: {
@@ -59,12 +71,16 @@ export default {
     },
     lineSlides() {
       return this.$store.state.lineSlides;
+    },
+    webbingGrips(){
+      return this.$store.state.webbingGrips;
     }
   },
   mounted() {
     this.$store.dispatch("getLeashRings");
     this.$store.dispatch("getManufacturers");
     this.$store.dispatch('getLineSlides');
+    this.$store.dispatch('getWebbingGrips')
   },
   methods: {
     logout() {
@@ -74,7 +90,8 @@ export default {
   components: {
     leashRings,
     manufacturer,
-    lineSlide
+    lineSlide,
+    webbingGrip
   },
 };
 </script>
