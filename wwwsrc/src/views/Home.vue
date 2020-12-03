@@ -2,6 +2,7 @@
   <div class="home">
     <h1>Welcome To Weigh My Slack</h1>
     <div class="row justify-content-center">
+      <h3>Leash Rings</h3>
       <leashRings
         v-for="leashRingItem in leashRings"
         :leashRings="leashRingItem"
@@ -9,6 +10,7 @@
       ></leashRings>
     </div>
     <div class="row justify-content-center">
+      <h3>Manufacturers</h3>
       <manufacturer
         v-for="manufacturerItem in manufacturers"
         :manufacturer="manufacturerItem"

@@ -11,8 +11,42 @@ using Microsoft.Extensions.Logging;
 
 namespace weighmyslack.Controllers
 {
-  public class LineSlidesController
+  [ApiController]
+  [Route("api/[controller]")]
+  public class LineSlidesController : ControllerBase
   {
+    private readonly LineSlidesService _lss;
+
+    public LineSlidesController(LineSlidesService lss)
+    {
+      _lss = lss;
+    }
+    [HttpGet]
+    ActionResult<IEnumerable<LineSlide>> Get()
+    {
+      try
+      {
+        return Ok(_lss.Get());
+      }
+      catch (Exception err)
+      {
+        return BadRequest(err.Message);
+      }
+    }
+
+    [HttpPost]
+    public ActionResult<LineSlide> Post([FromBody] LineSlide newLineSlide)
+    {
+      try
+      {
+        return Ok(_lss.Create(newLineSlide));
+      }
+      catch (Exception err)
+      {
+        return BadRequest(err.Message);
+      }
+    }
+
 
   }
 }
