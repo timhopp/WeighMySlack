@@ -1,7 +1,8 @@
 <template>
-  <div class="manufacturer">
-    <div class="card bg-light">
+  <div class="manufacturer col-2">
+    <div class="border p-1 text-center">
       <p>{{ manufacturer.name }}</p>
+      <img class="home-img" :src="manufacturer.img" alt="">
     </div>
   </div>
 </template>

@@ -18,6 +18,7 @@ let api = Axios.create({
 export default new Vuex.Store({
   state: {
     leashRings: [],
+    lineSlides: [],
     manufacturerLeashRings: [],
     manufacturers: [],
     myRigs: [],
@@ -29,6 +30,9 @@ export default new Vuex.Store({
     },
     setLeashRings(state, leashrings) {
       state.leashRings = leashrings;
+    },
+    setLineSlides(state, lineSlides) {
+      state.lineSlides = lineSlides;
     },
     setManufacturerLeashRings(state, manufacturerLeashRings) {
       state.manufacturerLeashRings = manufacturerLeashRings;
@@ -56,8 +60,10 @@ export default new Vuex.Store({
         .then((res) => commit("setManufacturers", res.data));
     },
     getLeashRings({ commit }) {
-      debugger;
       api.get("leashrings").then((res) => commit("setLeashRings", res.data));
+    },
+    getLineSlides({ commit }) {
+      api.get("lineslides").then((res) => commit("setLineSlides", res.data));
     },
     getLeashRingsByManufacturer({ commit }, manufacturerId) {
       api

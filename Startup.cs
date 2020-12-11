@@ -69,6 +69,8 @@ namespace Keepr
       services.AddTransient<RigsRepository>();
       services.AddTransient<RigComponentsService>();
       services.AddTransient<RigComponentRepository>();
+      services.AddTransient<LineSlidesService>();
+      services.AddTransient<LineSlidesRepository>();
     }
 
     private IDbConnection CreateDbConnection()

@@ -14,13 +14,14 @@
   -- CREATE TABLE lineslides (
   --   id int NOT NULL AUTO_INCREMENT,
   --     manufacturerid int NOT NULL,
-  --     name VARCHAR(255) NOt NULL,
+  --     img VARCHAR(255),   
+  --     name VARCHAR(255) NOT NULL,
   --     manufacturer VARCHAR(255) NOT NULL,
   --     componenttype VARCHAR(255) NOT NULL,
   --     material VARCHAR(255),
   --     weight int, 
   --     wll int,
-  --     mbc int,
+  --     mbs int,
   --     webbingwidth VARCHAR(255), 
   --     slidertype VARCHAR(255),
   --     innerwidth int,
@@ -133,3 +134,4 @@
 -- DROP TABLE IF EXISTS vaults;
 -- DROP TABLE IF EXISTS keeps;
 -- DROP TABLE IF EXISTS rig;
+-- DROP TABLE IF EXISTS lineslides;

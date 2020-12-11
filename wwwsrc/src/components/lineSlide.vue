@@ -1,10 +1,10 @@
 <template>
-  <div class="leashRings col-2">
+  <div class="lineSlide col-2">
     <div class="border p-1 text-center">
-      <p>{{ leashRings.name }}</p>
-      <img class=" home-img" :src="leashRings.img" alt="">
-      <div class="row justify-content-center">
-      <button class="btn btn-outline-info col-4 m-1" @click="addToRig(leashRings.id)">
+      <h5>{{ lineSlide.name }}</h5>
+      <img class="home-img" :src="lineSlide.img" alt="">
+        <div class="row justify-content-center">
+      <button class="btn btn-outline-info col-4 m-1" @click="addToRig(lineSlide.id)">
         Own
       </button>
       <button class="btn btn-outline-info col-4 m-1">
@@ -19,16 +19,16 @@
 
 <script>
 export default {
-  name: "leashRings",
-  props: ["leashRings"],
+  name: "lineSlide",
+  props: ["lineSlide"],
   data() {
     return {};
   },
   computed: {},
   methods: {
-    addLeashRingsToRig(leashRingID) {
+    addLineSlideToRig(lineSlideID) {
       this.$store.commit("addToRig", {
-        leashRingId: leashRingID,
+        lineSlideId: lineSlideID,
         rigId: "3",
         userId: this.$store.state.user.sub,
       });

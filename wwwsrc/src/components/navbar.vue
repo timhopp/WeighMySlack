@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <router-link class="navbar-brand" :to="{ name: 'home' }">Keepr</router-link>
+  <nav class="navbar navbar-expand-lg  bg-dark navtext">
+    <router-link class="navbar-brand navtext" :to="{ name: 'home' }">Weigh My Slack</router-link>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" :class="{ active: $route.name == 'home' }">
-          <router-link :to="{ name: 'home' }" class="nav-link"
+          <router-link :to="{ name: 'home' }" class="nav-link navtext"
             >Home</router-link
           >
         </li>

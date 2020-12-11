@@ -23,7 +23,7 @@ namespace weighmyslack.Repositories
 
     internal LineSlide Create(LineSlide newLineSlide)
     {
-      string sql = @"INSERT INTO LineSlides (manufacturerid, name, img, manufacturer, componenttype, material, weight, wll, mbs, materialdiameter, innerdiameter, outerdiameter, price) VALUES (@manufacturerid, @name, @img, @manufacturer, @componenttype, @material, @weight, @wll, @mbs, @materialdiameter, @innerdiameter, @outerdiameter, @price); SELECT LAST_INSERT_ID();";
+      string sql = @"INSERT INTO LineSlides (manufacturerid, name, img, manufacturer, componenttype, material, weight, wll, mbs, webbingwidth, slidertype, innerwidth, price) VALUES (@manufacturerid, @name, @img, @manufacturer, @componenttype, @material, @weight, @wll, @mbs, @webbingwidth, @slidertype, @innerwidth, @price); SELECT LAST_INSERT_ID();";
       newLineSlide.Id = _db.ExecuteScalar<int>(sql, newLineSlide);
       return newLineSlide;
     }

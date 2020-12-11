@@ -4,3 +4,12 @@
   border-color: darken($color: $primary, $amount: 10);
   border-width: medium;
 }
+
+.home-img {
+  max-height: 125px;
+  width: 50%;
+}
+
+.navtext {
+  color: white !important;
+}

@@ -22,7 +22,7 @@ namespace weighmyslack.Controllers
       _lss = lss;
     }
     [HttpGet]
-    ActionResult<IEnumerable<LineSlide>> Get()
+    public ActionResult<IEnumerable<LineSlide>> Get()
     {
       try
       {
